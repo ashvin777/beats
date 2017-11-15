@@ -1,0 +1,31 @@
+html {
+  padding: 10px 20px; }
+
+html,
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+iframe {
+  width: 100%;
+  border: 0; }
+
+
+button {
+  appearance: none;
+  border: 0;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 0;
+  background: #e6e6e6; }
+  button .icon {
+    font-size: 14px; }
+  button:focus {
+    outline: 0; }
+  button:active {
+    background: #cccccc; }
+  button.primary {
+    background: #000099;
+    color: white; }
+    button.primary:active {
+      background: #000066; }

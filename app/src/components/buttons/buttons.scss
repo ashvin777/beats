@@ -1,0 +1,28 @@
+button {
+  appearance: none;
+  border: 0;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 0;
+  background: darken(white, 10%);
+  
+  .icon {
+    font-size: 14px;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    background: darken(white, 20%);
+  }
+
+  &.primary {
+    background: darken(blue, 20%);
+    color: white;
+    &:active{
+      background: darken(blue, 30%);
+    }
+  }
+}

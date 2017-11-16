@@ -1,3 +1,19 @@
-p {
-  font-weight: 300;
+.panel {
+  $padding: 10px 20px;
+  width: 300px;
+  box-shadow: 0 5px 13px 3px darken(white, 15%);
+  border-radius: 5px;
+
+  .panel-header {
+    padding: $padding;
+  }
+
+  .panel-media {
+    height: 200px;
+    background-image: url('http://www.cameraegg.org/wp-content/uploads/2013/02/Leica-M-Sample-Image.jpg');
+    background-size: cover;
+  }
+  
+  .panel-body {}
+  .panel-footer {}
 }

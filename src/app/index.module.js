@@ -1,5 +1,3 @@
-/* global malarkey:false, moment:false */
-
 import {
   routerConfig
 } from './index.route';

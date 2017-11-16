@@ -6,26 +6,34 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif; }
 
-iframe {
-  width: 100%;
-  border: 0; }
+h3 {
+  font-weight: lighter; }
 
 
-button {
+button, .btn {
   appearance: none;
   border: 0;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 0;
-  background: #e6e6e6; }
-  button .icon {
+  background: #e6e6e6;
+  position: relative; }
+  button .icon, .btn .icon {
     font-size: 14px; }
-  button:focus {
+  button:focus, .btn:focus {
     outline: 0; }
-  button:active {
+  button:active, .btn:active {
     background: #cccccc; }
-  button.primary {
-    background: #000099;
-    color: white; }
-    button.primary:active {
-      background: #000066; }
+
+.btn-group {
+  overflow: auto; }
+  .btn-group .btn, .btn-group button {
+    float: left;
+    border-top: 1px solid #b3b3b3;
+    border-bottom: 1px solid #b3b3b3;
+    border-left: 1px solid #b3b3b3; }
+    .btn-group .btn:first-of-type, .btn-group button:first-of-type {
+      border-radius: 5px 0 0 5px; }
+    .btn-group .btn:last-of-type, .btn-group button:last-of-type {
+      border-right: 1px solid #b3b3b3;
+      border-radius: 0 5px 5px 0; }

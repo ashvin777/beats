@@ -1,11 +1,12 @@
-button {
+button, .btn {
   appearance: none;
   border: 0;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 0;
   background: darken(white, 10%);
-  
+  position: relative;
+
   .icon {
     font-size: 14px;
   }
@@ -18,11 +19,24 @@ button {
     background: darken(white, 20%);
   }
 
-  &.primary {
-    background: darken(blue, 20%);
-    color: white;
-    &:active{
-      background: darken(blue, 30%);
+}
+
+.btn-group{
+  overflow: auto;
+  .btn, button{
+    float: left;
+    border-top: 1px solid darken(white, 30%);
+    border-bottom: 1px solid darken(white, 30%);
+    border-left: 1px solid darken(white, 30%);
+
+    &:first-of-type{
+      border-radius: 5px 0 0 5px;
     }
+
+    &:last-of-type{
+      border-right: 1px solid darken(white, 30%);
+      border-radius: 0 5px 5px 0;
+    }
+
   }
 }

@@ -1,37 +1,29 @@
-'use strict';
+const gulp = require('gulp');
+const HubRegistry = require('gulp-hub');
+const browserSync = require('browser-sync');
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var browserSync = require('browser-sync').create();
+const conf = require('./conf/gulp.conf');
 
-gulp.task('sass', function () {
+// Load some files into the registry
+const hub = new HubRegistry([conf.path.tasks('*.js')]);
 
-  return gulp.src('./app/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concat('index.css'))
-    .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.stream());
-  
-});
+// Tell gulp to use the tasks just loaded
+gulp.registry(hub);
 
-gulp.task('html', function () {
-  
-    return gulp.src('./app/**/*.html')
-      .pipe(gulp.dest('./dist'))
-      .pipe(browserSync.stream());
-    
-  });
+gulp.task('build', gulp.series(gulp.parallel('other', 'webpack:dist')));
+gulp.task('test', gulp.series('karma:single-run'));
+gulp.task('test:auto', gulp.series('karma:auto-run'));
+gulp.task('serve', gulp.series('webpack:watch', 'watch', 'browsersync'));
+gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
+gulp.task('default', gulp.series('clean', 'build'));
+gulp.task('watch', watch);
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function () {
+function reloadBrowserSync(cb) {
+  browserSync.reload();
+  cb();
+}
 
-  browserSync.init({
-    server: "./dist"
-  });
-
-  gulp.watch('./app/**/*.scss', ['sass']);
-  gulp.watch("./app/**/*.html", ['html']).on('change', browserSync.reload);
-});
-
-gulp.task('default', ['serve']);
+function watch(done) {
+  gulp.watch(conf.path.tmp('index.html'), reloadBrowserSync);
+  done();
+}

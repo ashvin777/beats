@@ -7,6 +7,7 @@ import './components/';
 angular
   .module('beats', [
     'components',
-    'ui.router'
+    'ui.router',
+    'hljs'
   ])
   .config(routerConfig);

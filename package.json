@@ -1,7 +1,9 @@
 {
   "name": "beats",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "angular-highlightjs": "^0.7.1"
+  },
   "scripts": {
     "start": "gulp serve",
     "test": "gulp test"

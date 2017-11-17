@@ -1,0 +1,104 @@
+@import '../../styles/consts';
+
+//INPUT GROUP
+.form-group {
+  margin-bottom: 1rem;
+  label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  .msg {
+    font-size: $small;
+    margin-top: 0.5rem;
+  }
+
+  &.inline{
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    select,
+    textarea{
+      width: auto;
+    }
+  }
+}
+
+//INPUT
+input,
+select,
+textarea {
+  &:focus {
+    outline: 0;
+  }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select,
+textarea {
+  appearance: none;
+  display: inline-block;
+  width: 100%;
+  min-height: 2.5rem;
+  font-size: $regular;
+  padding: 0.5rem 1rem;
+  border: 1px solid darken($color: white, $amount: 10%);
+  border-radius: 5px;
+  
+  background-color: white;
+
+  &:focus {
+    outline: 0;
+    border: 1px solid $primary;
+  }
+
+  &.material{
+    border: 0;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 2px solid darken($color: white, $amount: 10%);
+
+    &:focus{
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+//BUTTON
+button{
+  appearance: none;
+  border: 0;
+  font-size: $regular;
+  padding: $btn-padding;
+  line-height: 1.5;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active{
+    background-color: darken(white, 5%);
+  }
+
+  &.primary{
+    color: white;
+    background-color: $primary;
+
+    &:active{
+      background-color: $primary;
+    }
+
+  }
+
+  &.secondary{
+    color: black;
+    background-color: darken(white, 10%);
+
+    &:active{
+      background-color: darken(white, 20%);
+    }
+  }
+
+}

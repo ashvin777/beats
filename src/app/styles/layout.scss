@@ -1,10 +1,26 @@
+@import './consts';
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  font-size: $root-font;
 }
 
 body {
-  padding: 10px 20px;
-  font-weight: lighter;
+  padding: 1rem 1.5rem;
+}
+
+.container {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 5px;
+}
+
+.box-shadow {
+  box-shadow: $shadow-white;
 }

@@ -4,3 +4,4 @@ coverage/
 .sass-cache/
 .idea/
 .tmp/
+./package-lock.json

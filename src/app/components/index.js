@@ -1,10 +1,10 @@
 
 import HomeComponent from './home/home.component';
 
-import PanelComponent from './panel/panel.component';
+import CardComponent from './card/card.component';
 
 angular
   .module('components', [])
   .component('homeComponent', HomeComponent)
-  .component('panel', PanelComponent)
+  .component('card', CardComponent)
   ;

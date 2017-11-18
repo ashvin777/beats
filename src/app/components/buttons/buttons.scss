@@ -1,0 +1,55 @@
+//BUTTON
+button{
+  appearance: none;
+  border: 0;
+  font-size: $regular;
+  padding: $btn-padding;
+  line-height: 1.5;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active{
+    background-color: darken(white, 5%);
+  }
+
+  &.primary{
+    color: white;
+    background-color: $primary;
+
+    &:active{
+      background-color: darken($primary, 5%);
+    }
+
+    svg{
+      fill: white;
+    }
+
+  }
+
+  &.secondary{
+    color: black;
+    background-color: darken(white, 10%);
+
+    &:active{
+      background-color: darken(white, 20%);
+    }
+  }
+}
+
+.btn-group{
+  display: flex;
+
+  button{
+    border-radius: 0;
+
+    &:first-of-type{
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-of-type{
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}

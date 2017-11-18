@@ -1,5 +1,3 @@
-<h3 class="title">Form Entities</h3>
-
 <form class="container box-shadow">
 
   <div class="form-group">
@@ -40,6 +38,19 @@
     </select>
   </div>
 
+  <div hljs>
+    <div class="form-group">
+      <label for="age">Age group</label>
+      <select id="age">
+        <option>0 - 20 Years</option>
+        <option>20 - 40 Years</option>
+        <option>40 - 60 Years</option>
+        <option>60 - 80 Years</option>
+        <option>> 100 Years</option>
+      </select>
+    </div>
+  </div>
+
   <div class="form-group">
     <label for="age">Multi age group</label>
     <select multiple id="age">
@@ -50,6 +61,20 @@
       <option>> 100 Years</option>
     </select>
     <div class="msg color-error">Make sure that age is correct.</div>
+  </div>
+
+  <div hljs>
+    <div class="form-group">
+      <label for="age">Multi age group</label>
+      <select multiple id="age">
+        <option>0 - 20 Years</option>
+        <option>20 - 40 Years</option>
+        <option>40 - 60 Years</option>
+        <option>60 - 80 Years</option>
+        <option>> 100 Years</option>
+      </select>
+      <div class="msg color-error">Make sure that age is correct.</div>
+    </div>
   </div>
 
   <div class="form-group">
@@ -63,9 +88,41 @@
     </select>
   </div>
 
+  <div hljs>
+    <div class="form-group">
+      <label for="age">Age group</label>
+      <select id="age" class="material">
+        <option>0 - 20 Years</option>
+        <option>20 - 40 Years</option>
+        <option>40 - 60 Years</option>
+        <option>60 - 80 Years</option>
+        <option>> 100 Years</option>
+      </select>
+    </div>
+  </div>
+
   <div class="form-group">
     <label for="textarea">Example Textarea</label>
     <textarea id="textarea"></textarea>
+  </div>
+
+  <div hljs>
+    <div class="form-group">
+      <label for="textarea">Example Textarea</label>
+      <textarea id="textarea"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group inline">
+    <label for="range">Range Picker</label>
+    <input type="range" id="range">
+  </div>
+
+  <div hljs>
+    <div class="form-group inline">
+      <label for="range">Range Picker</label>
+      <input type="range" id="range">
+    </div>
   </div>
 
   <div class="form-group inline">
@@ -73,9 +130,23 @@
     <input type="text" id="question" placeholder="Enter question">
   </div>
 
+  <div hljs>
+    <div class="form-group inline">
+      <label for="question">Faviourite Question ?</label>
+      <input type="text" id="question" placeholder="Enter question">
+    </div>
+  </div>
+
   <div class="form-group">
     <input type="checkbox" id="checkbox">
     <label for="checkbox">Agree with terms and conditions ?</label>
+  </div>
+
+  <div hljs>
+    <div class="form-group">
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">Agree with terms and conditions ?</label>
+    </div>
   </div>
 
   <div class="form-group">
@@ -83,19 +154,47 @@
     <label for="radio1">Agree with terms and conditions ?</label>
   </div>
 
+  <div hljs>
+    <div class="form-group">
+      <input type="radio" name="radio" id="radio1">
+      <label for="radio1">Agree with terms and conditions ?</label>
+    </div>
+  </div>
+
   <div class="form-group">
+    <input type="radio" name="radio" id="radio2">
+    <label for="radio2">Agree with terms and conditions ?</label>
+  </div>
+
+  <div hljs>
+    <div class="form-group">
       <input type="radio" name="radio" id="radio2">
       <label for="radio2">Agree with terms and conditions ?</label>
     </div>
+  </div>
 
   <div class="form-group">
     <label for="email">Email address</label>
     <input class="material" type="email" id="email" placeholder="Enter email" required>
   </div>
 
+  <div hljs>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input class="material" type="email" id="email" placeholder="Enter email" required>
+    </div>
+  </div>
+
   <div class="form-group">
     <label for="email">Email address</label>
     <input type="email" id="email" placeholder="Enter email" required>
+  </div>
+
+  <div hljs>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" id="email" placeholder="Enter email" required>
+    </div>
   </div>
 
   <button class="primary" type="submit">
@@ -109,5 +208,19 @@
   <button class="right" type="button">
     Cancel
   </button>
+
+  <div hljs>
+    <button class="primary" type="submit">
+      Submit
+    </button>
+
+    <button class="secondary" type="reset">
+      Reset
+    </button>
+
+    <button class="right" type="button">
+      Cancel
+    </button>
+  </div>
 
 </form>

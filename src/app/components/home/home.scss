@@ -1,5 +1,56 @@
-.custom-title{
+.beats-header{
   font-family: 'Lobster', cursive;
+  margin: 0;
+  padding: 1rem;
+  background: darken($primary, 30%);
+  color: white;
+  font-weight: lighter;
+
+  span{
+    padding-right: 10px;
+  }
+
+  svg{
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: white;
+  }
+
+  .version{
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 0.5rem;
+  }
+
+}
+
+.tabs.beats-subheader{
+  background: darken($primary, 30%);
+  color: white;
+  .links{
+    border: 0;
+    .link{
+      &.active{
+        border-bottom-color: #43c9e8;
+      }
+
+      &:active{
+        background-color: darken($primary, 40%);
+      }
+    }
+  }
+}
+
+.beats-body{
+  padding: 1rem;
+  height: calc( 100vh - 110px );
+  overflow: auto;
+
+  > .tabs{
+    .content{
+      height: calc( 100% - 38px );
+    }
+  }
 }
 
 [hljs]{

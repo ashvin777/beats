@@ -1,26 +1,33 @@
 <div>
 
-  <h1 class="custom-title">
+  <h1 class="beats-header">
+    <span ng-include="'../../../assets/icons/beats.svg'"></span>
     Beats.css
+    <span class="version">version - pre-alpha</span>
   </h1>
 
-  <div class="tabs">
+  <div class="tabs beats-subheader">
     <ul class="links">
       <li class="link" ng-click="$home.openTab(0)" ng-class="{ active : $home.index == 0 }">Form</li>
       <li class="link" ng-click="$home.openTab(1)" ng-class="{ active : $home.index == 1 }">Tabs</li>
       <li class="link" ng-click="$home.openTab(2)" ng-class="{ active : $home.index == 2 }">Card</li>
       <li class="link" ng-click="$home.openTab(3)" ng-class="{ active : $home.index == 3 }">Buttons</li>
     </ul>
-
-    <div class="content">
-      <forms-component ng-show="$home.index == 0"></forms-component>
-
-      <tabs-component ng-show="$home.index == 1"></tabs-component>
-
-      <card-component ng-show="$home.index == 2"></card-component>
-
-      <buttons-component ng-show="$home.index == 3"></buttons-component>
-    </div>
   </div>
 
+  <div class="beats-body">
+
+    <div class="tabs">
+
+      <div class="content">
+        <forms-component ng-show="$home.index == 0"></forms-component>
+
+        <tabs-component ng-show="$home.index == 1"></tabs-component>
+
+        <card-component ng-show="$home.index == 2"></card-component>
+
+        <buttons-component ng-show="$home.index == 3"></buttons-component>
+      </div>
+    </div>
+  </div>
 </div>

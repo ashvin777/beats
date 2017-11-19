@@ -9,20 +9,3 @@
 .left {
   float: left;
 }
-
-.title{
-  font-weight: lighter;
-  padding: 0.5rem 0;
-}
-
-.icon-only{
-  position: relative;
-
-  svg{
-    height: 1rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
-  }
-}

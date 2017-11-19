@@ -2,7 +2,8 @@ import TabsCtrl from './tabs.controller';
 
 let TabsComponent = {
   templateUrl: 'app/components/tabs/tabs.html',
-  controller: angular.noop
+  controllerAs: '$tabs',
+  controller: TabsCtrl
 };
 
 export default TabsComponent;

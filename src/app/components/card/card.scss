@@ -1,19 +1,30 @@
-.panel {
-  $padding: 10px 20px;
-  width: 300px;
-  box-shadow: 0 5px 13px 3px darken(white, 15%);
-  border-radius: 5px;
+@import '../../styles/consts';
 
-  .panel-header {
-    padding: $padding;
-  }
-
-  .panel-media {
-    height: 200px;
-    background-image: url('http://www.cameraegg.org/wp-content/uploads/2013/02/Leica-M-Sample-Image.jpg');
-    background-size: cover;
-  }
+.card {
+  box-shadow: $shadow-white;
+  border-radius: $border-radius;
+  margin: 1rem;
+  overflow: hidden;
   
-  .panel-body {}
-  .panel-footer {}
+  img{
+    width: 100%;
+  }
+  .body {
+    padding: 1.5rem;
+    .title {
+      margin-bottom: 0.25rem;
+      font-weight: 400;
+      font-size: $large;
+    }
+    .subtitle {
+      margin-bottom: 0.25rem;
+      color: $info;
+      font-weight: 400;
+      font-size: $small;
+    }
+    .text{
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+  }
 }

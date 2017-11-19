@@ -3,11 +3,12 @@
   .links{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 1rem;
     border-bottom: 1px solid darken(white, 10%);
+    overflow: auto;
 
     .link{
-      display: inline-block;
+      float: left;
       padding: 0.5rem 0.75rem;
       cursor: pointer;
 

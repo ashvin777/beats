@@ -8,10 +8,7 @@
 
   <div class="tabs beats-subheader">
     <ul class="links">
-      <li class="link" ng-click="$home.openTab(0)" ng-class="{ active : $home.index == 0 }">Form</li>
-      <li class="link" ng-click="$home.openTab(1)" ng-class="{ active : $home.index == 1 }">Tabs</li>
-      <li class="link" ng-click="$home.openTab(2)" ng-class="{ active : $home.index == 2 }">Card</li>
-      <li class="link" ng-click="$home.openTab(3)" ng-class="{ active : $home.index == 3 }">Buttons</li>
+      <li class="link" ng-repeat="cmp in $home.components" ng-click="$home.openTab(cmp)" ng-class="{ active : $home.component == cmp }">{{cmp}}</li>
     </ul>
   </div>
 
@@ -20,13 +17,17 @@
     <div class="tabs">
 
       <div class="content">
-        <forms-component ng-show="$home.index == 0"></forms-component>
 
-        <tabs-component ng-show="$home.index == 1"></tabs-component>
+        <forms-component ng-show="$home.component == 'Form'"></forms-component>
 
-        <card-component ng-show="$home.index == 2"></card-component>
+        <tabs-component ng-show="$home.component == 'Tabs'"></tabs-component>
 
-        <buttons-component ng-show="$home.index == 3"></buttons-component>
+        <card-component ng-show="$home.component == 'Card'"></card-component>
+
+        <buttons-component ng-show="$home.component == 'Buttons'"></buttons-component>
+
+        <dropdown-component ng-show="$home.component == 'Dropdown'"></dropdown-component>
+
       </div>
     </div>
   </div>

@@ -1,10 +1,13 @@
+import { COMPONENTS } from './home.constants';
+
 export default class HomeCtrl { 
   constructor() {
     'ngInject';
-    this.index = 0;
+    this.component = 'Dropdown';//COMPONENTS[0];
+    this.components = COMPONENTS;
   }
 
-  openTab(index) {
-    this.index = index;
+  openTab(component) {
+    this.component = component;
   }
 }

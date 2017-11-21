@@ -1,0 +1,17 @@
+<div class="dropdown"
+  ng-click="$ctrl.toggleMenu()"
+  ng-class="{ active : $ctrl.isOptionsVisible }">
+
+  <div ng-if="$ctrl.placeholder" class="title">{{$ctrl.getValue($ctrl.ngModel) || $ctrl.placeholder}}</div>
+
+  <ul class="options" ng-if="$ctrl.isOptionsVisible">
+    <li
+      ng-repeat="option in $ctrl.options"
+      ng-click="$ctrl.optionClick(option)"
+      ng-disabled="option.disabled"
+      ng-class="{ seperator : option.seperator }">
+      {{option.text}}
+    </li>
+  </ul>
+
+</div>

@@ -9,7 +9,7 @@
     display: inline-block;
   }
 
-  .menu {
+  .options {
     margin: 0;
     padding: 0;
     min-width: 10rem;
@@ -19,7 +19,6 @@
     right: -1rem;
     list-style: none;
     z-index: 0;
-    color: black;
 
     // pointer-events: auto;
     background: white;
@@ -81,19 +80,19 @@
     }
 
     &.direction-right{
-      .menu{
+      .options{
         right: unset;
       }
     }
 
     &.direction-left{
-      .menu{
+      .options{
         left: unset;
       }
     }
   }
 
-  &.active .menu {
+  &.active .options {
     display: inline-block;
     z-index: 100;
   }

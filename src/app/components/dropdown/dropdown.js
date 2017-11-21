@@ -1,33 +1,50 @@
+/* global window */
+
 function DropDown(el) {
-  this.dd = el;
-  this.placeholder = this.dd.children('.title');
-  this.opts = this.dd.find('ul.dropdown > li');
+  this.dd = document.querySelector(el);
+  this.placeholder = this.dd.querySelector('.title');
+  this.opts = this.dd.querySelectorAll('ul.menu > li:not([disabled])');
   this.val = '';
   this.index = -1;
   this.initEvents();
 }
 
 DropDown.prototype = {
-  initEvents : function() {
+  initEvents: function () {
     var obj = this;
+    const CLICK = 'click';
+    const ACTIVE = 'active';
 
-    obj.dd.on('click', function(event){
-      $(this).toggleClass('active');
+    obj.dd.addEventListener(CLICK, function(){
+      this.classList.toggle(ACTIVE);
       return false;
     });
 
-    obj.opts.on('click',function(){
-      var opt = $(this);
-      obj.val = opt.text();
-      obj.index = opt.index();
-      obj.placeholder.text(obj.val);
+    obj.opts.forEach(function(element, index) {
+
+      element.addEventListener(CLICK,function(){
+        obj.val = element.innerText;
+        obj.index = index;
+        if(obj.placeholder){
+          obj.placeholder.innerText = obj.val;
+        }
+      });
+
     });
+
+    document.addEventListener(CLICK, function(ev){
+      if( ev.target.closest('#'+ obj.dd.getAttribute('id')) == null ){
+        obj.dd.classList.remove(ACTIVE);
+      }
+    });
+
   },
-  getValue : function() {
+  getValue: function () {
     return this.val;
   },
-  getIndex : function() {
+  getIndex: function () {
     return this.index;
   }
 }
+
 export default DropDown;

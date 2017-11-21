@@ -1,10 +1,68 @@
-<div id="dd" class="wrapper-dropdown">
+<div class="container box-shadow">
 
-    <span class="title">Transport</span>
+  <dropdown
+    placeholder="Sort by..."
+    ng-model="$dropdown.dropdown"
+    options="$dropdown.options"
+    on-option-click="$dropdown.onClick(option)"></dropdown>
 
-    <ul class="dropdown">
-      <li>Classic mail</li>
-      <li>UPS Delivery</li>
-      <li>Private jet</li>
-    </ul>
+</div>
+
+<div class="flex">
+
+  <div class="container box-shadow">
+    <div id="dropdown1" class="dropdown">
+
+      <div class="title">Sort by...</div>
+
+      <ul class="menu">
+        <li disabled>Sort by...</li>
+        <li class="seperator">Sort by name</li>
+        <li>Sort by oldest</li>
+        <li>Sort by eldest</li>
+        <li disabled class="seperator">Sort be category</li>
+      </ul>
+
+    </div>
+
   </div>
+
+  <div class="container box-shadow">
+    <div id="dropdown3" class="dropdown no-label direction-left">
+
+      <span class="icon" ng-include="'../../../assets/icons/more-horizontal.svg'">
+      </span>
+      <!-- <div class="title">Sort by...</div> -->
+
+      <ul class="menu">
+        <li disabled>Sort by...</li>
+        <li class="seperator">Sort by name</li>
+        <li>Sort by oldest</li>
+        <li>Sort by eldest</li>
+        <li disabled class="seperator">Sort be category</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="container box-shadow">
+    <div id="dropdown4" class="dropdown no-label direction-right">
+
+      <span class="icon" ng-include="'../../../assets/icons/more-horizontal.svg'">
+      </span>
+      <!-- <div class="title">Sort by...</div> -->
+
+      <ul class="menu">
+        <li disabled>Sort by...</li>
+        <li class="seperator">Sort by name</li>
+        <li>Sort by oldest</li>
+        <li>Sort by eldest</li>
+        <li disabled class="seperator">Sort be category</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>

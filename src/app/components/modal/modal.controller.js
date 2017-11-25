@@ -1,38 +1,52 @@
-import { Modal, Alert } from './modal';
+import {
+  Modal,
+  Alert,
+  Confirm,
+  Prompt
+} from './modal';
 
 export default class ModalController {
   constructor() {
-    'ngInject'; 
+    'ngInject';
+
+    this.modal1 = null;
+    this.modal2 = null;
   }
 
   $onInit() {
-    this.modal1 = new Modal('#modal1-opener', '#modal1');
-    this.modal2 = new Modal('#modal2-opener', '#modal2');
 
-    this.modal1.on('close', () => {
-      console.log('on close modal1 click');
-    });
+    this.modal1 = new Modal("#modal1");
+    this.modal2 = new Modal("#modal2");
 
-    this.modal2.on('close', () => {
-      console.log('on close modal2 click');
-    });
-
-    window.onDeleteClick =  () => {
-      alert('Deleted');
+    window.onDeleteClick = () => {
       this.modal1.close();
       this.modal2.close();
     }
+
   }
 
-  closeModal1() {
-    this.modal1.close();
+  openModal1() {
+    this.modal1.show();
   }
 
-  closeModal2() {
-    this.modal2.close();
+  openModal2() {
+    this.modal2.show();
   }
 
   alert() {
-    let alert = new Alert('This is alert text');
+    Alert('OK. The data has been deleted !!');
   }
+  
+  confirm() {
+    Confirm('Are you sure ?', (isConfirmed) => {
+      console.log(isConfirmed);
+    });
+  }
+
+  prompt() {
+    Prompt('Please provide your input', (response) => {
+      console.log(response);
+    });
+  }
+
 }

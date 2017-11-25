@@ -1,8 +1,12 @@
-<button class="primary" id="modal1-opener">Open Modal 1</button>
+<button class="primary" ng-click="$modal.openModal1()">Open Modal 1</button>
 
-<button class="primary" id="modal2-opener">Open Modal 2</button>
+<button class="primary" ng-click="$modal.openModal2()">Open Modal 2</button>
 
 <button class="primary" ng-click="$modal.alert()">Alert</button>
+
+<button class="primary" ng-click="$modal.confirm()">Confirm</button>
+
+<button class="primary" ng-click="$modal.prompt()">Prompt</button>
 
 
 <div class="modal" id="modal1">
@@ -18,7 +22,7 @@
       with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </div>
     <div class="modal-footer">
-      <button class="close-modal">CANCEL</button>
+      <button class="close">CANCEL</button>
       <button onclick="window.onDeleteClick()">DELETE</button>
     </div>
   </div>
@@ -34,7 +38,7 @@
       text ever since the 1500s.
     </div>
     <div class="modal-footer">
-      <button class="close-modal">CANCEL</button>
+      <button class="close">CANCEL</button>
       <button onclick="window.onDeleteClick()">DELETE</button>
     </div>
   </div>

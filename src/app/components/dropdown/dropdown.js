@@ -10,6 +10,7 @@ function DropDown(el) {
 }
 
 DropDown.prototype = {
+  constructor: DropDown,
   initEvents: function () {
     var obj = this;
     const CLICK = 'click';

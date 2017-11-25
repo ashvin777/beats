@@ -1,9 +1,7 @@
-import {
-  Modal,
-  Alert,
-  Confirm,
-  Prompt
-} from './modal';
+import Modal from './modal';
+import Alert from './alert';
+import Prompt from './prompt';
+import Confirm from './confirm';
 
 export default class ModalController {
   constructor() {

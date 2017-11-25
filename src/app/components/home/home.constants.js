@@ -4,5 +4,6 @@ export const COMPONENTS = [
   "Card",
   "Buttons",
   "Dropdown",
-  "Modal"
+  "Modal",
+  "Tooltip"
 ];

@@ -3,7 +3,7 @@ import { COMPONENTS } from './home.constants';
 export default class HomeCtrl { 
   constructor() {
     'ngInject';
-    this.component = 'Dropdown';//COMPONENTS[0];
+    this.component = 'Tooltip';//COMPONENTS[0];
     this.components = COMPONENTS;
   }
 

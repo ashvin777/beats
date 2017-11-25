@@ -1,0 +1,123 @@
+#tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+  pointer-events: none;
+  animation: fade 1000ms;
+  font-size: 0.75rem;
+
+  /* The animation code */
+  @keyframes fade {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+
+  span {
+    position: absolute;
+    background: rgba(black, 0.8);
+    color: white;
+    line-height: normal;
+    min-width: 7rem;
+
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+    z-index: 1000;
+
+    text-align: center;
+
+    //default top positioning
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:after {
+      top: -1rem;
+      left: 50%;
+      right: unset;
+      bottom: unset;
+
+      content: '';
+      position: absolute;
+      border-width: 0.5rem;
+      border-color: transparent;
+      border-style: solid;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: rgba(black, 0.8);;
+      border-top-color: transparent;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.top{
+    span{
+      top: unset;
+      right: unset;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:after{
+        top: unset;
+        left: 50%;
+        right: unset;
+        bottom:  -1rem;
+        transform: translateX(-50%);
+
+        border-color: transparent;
+        border-top-color: rgba(black, 0.8);
+        border-top-width: 0.5rem;
+      }
+    }
+  }
+
+  &.left{
+    span{
+      top: 50%;
+      transform: translateY(-50%);
+
+      right: 0.5rem;
+      bottom: unset;
+      left: unset;
+      
+      &:after{
+        top: unset;
+        left: unset;
+        bottom:  unset;
+        right: -1rem;
+        transform: unset;
+        
+        border-color: transparent;
+        border-left-color: rgba(black, 0.8);
+        border-left-width: 0.5rem;
+       
+      }
+    }
+  }
+
+  &.right{
+    span{
+      top: 50%;
+      transform: translateY(-50%);
+
+      left: 0.5rem;
+      bottom: unset;
+      right: unset;
+      
+      &:after{
+        top: unset;
+        right: unset;
+        bottom:  unset;
+        left: -1rem;
+        transform: unset;
+        
+        border-color: transparent;
+        border-right-color: rgba(black, 0.8);
+        border-right-width: 0.5rem;
+       
+      }
+    }
+  }
+}

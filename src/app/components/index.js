@@ -5,6 +5,7 @@ import FormsComponent from './forms/forms.component';
 import TabsComponent from './tabs/tabs.component';
 import ButtonsComponent from './buttons/buttons.component';
 import DropdownComponent from './dropdown/dropdown.component';
+import TooltipComponent from './tooltip/tooltip.component';
 
 angular
   .module('components', [])
@@ -13,4 +14,5 @@ angular
   .component('formsComponent', FormsComponent)
   .component('tabsComponent', TabsComponent)
   .component('buttonsComponent', ButtonsComponent)
-  .component('dropdownComponent', DropdownComponent);
+  .component('dropdownComponent', DropdownComponent)
+  .component('tooltipComponent', TooltipComponent);

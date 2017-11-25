@@ -5,5 +5,8 @@ export const COMPONENTS = [
   "Buttons",
   "Dropdown",
   "Modal",
-  "Tooltip"
+  "Tooltip",
+  "Chips",
+  "Slider",
+  "Notifications"
 ];

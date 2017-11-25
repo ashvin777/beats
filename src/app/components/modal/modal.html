@@ -1,0 +1,41 @@
+<button class="primary" id="modal1-opener">Open Modal 1</button>
+
+<button class="primary" id="modal2-opener">Open Modal 2</button>
+
+<button class="primary" ng-click="$modal.alert()">Alert</button>
+
+
+<div class="modal" id="modal1">
+  <div class="modal-inner">
+    <div class="modal-title">
+      Delete this data file?
+    </div>
+    <div class="modal-body">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="modal-footer">
+      <button class="close-modal">CANCEL</button>
+      <button onclick="window.onDeleteClick()">DELETE</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal2">
+  <div class="modal-inner">
+    <div class="modal-title">
+      Modal 2
+    </div>
+    <div class="modal-body">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s.
+    </div>
+    <div class="modal-footer">
+      <button class="close-modal">CANCEL</button>
+      <button onclick="window.onDeleteClick()">DELETE</button>
+    </div>
+  </div>
+</div>

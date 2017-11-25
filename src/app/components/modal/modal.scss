@@ -1,0 +1,48 @@
+.modal{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  background: rgba(black, 0.4);
+  display: none;
+
+  &.visible{
+    display: inline-block;
+  }
+
+  /* The animation code */
+  @keyframes fade {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  .modal-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background: white;
+    box-shadow: 0 0 0 1px rgbs(0,0,0,0.05), 0 0 15px 0 rgba(0,0,0,0.2);
+    max-height: 100vh;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    min-width: 20rem;
+    animation: fade 300ms;
+    
+    .modal-title{
+      padding-top: 1rem ;
+      font-size: 1.5rem;
+    }
+
+    .modal-body{
+      padding-top: 1rem;
+    }
+
+    .modal-footer{
+      padding-top: 1rem;
+      float: right;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 function Tooltip(selector, text, options) {
-  this.element = document.querySelector(selector);
+  let $element = document.querySelector(selector);
   this.text = text;
   this.options = options || {};
 
-  this.element.addEventListener('mouseenter', this.mouseEnter.bind(this));
-  this.element.addEventListener('mouseleave', this.mouseLeave.bind(this));
+  $element.addEventListener('mouseenter', this.mouseEnter.bind(this));
+  $element.addEventListener('mouseleave', this.mouseLeave.bind(this));
 }
 
 Tooltip.prototype.mouseEnter = function (ev) {

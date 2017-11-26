@@ -7,6 +7,7 @@ import ButtonsComponent from './buttons/buttons.component';
 import DropdownComponent from './dropdown/dropdown.component';
 import TooltipComponent from './tooltip/tooltip.component';
 import ModalComponent from './modal/modal.component';
+import SliderComponent from './slider/slider.component';
 
 angular
   .module('components', [])
@@ -17,4 +18,5 @@ angular
   .component('buttonsComponent', ButtonsComponent)
   .component('dropdownComponent', DropdownComponent)
   .component('tooltipComponent', TooltipComponent)
-  .component('modalComponent', ModalComponent);
+  .component('modalComponent', ModalComponent)
+  .component('sliderComponent', SliderComponent);

@@ -8,5 +8,6 @@ export const COMPONENTS = [
   "Tooltip",
   "Chips",
   "Slider",
-  "Notifications"
+  "Notifications",
+  "Calendar"
 ];
